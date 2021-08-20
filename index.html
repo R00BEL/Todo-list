@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo list</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>Todo list</p>
+      <ul v-for="(name, index) of list" :key="index">
+        <li>{{name}}</li>
+        <button v-on:click="deleteName(name)">Delete</button>
+      </ul>
+      <input v-model="value" placeholder="Enter a new hobby" />
+      <button v-on:click="addName(value)">Add</button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
